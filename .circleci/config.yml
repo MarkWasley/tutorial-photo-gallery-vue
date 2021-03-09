@@ -21,7 +21,7 @@ jobs:
           name: Restore Node Modules Cache
           keys:
             - yarn-modules-{{ checksum "yarn.lock" }}
-      - run: ls node_modules || yarn install --frozen-lockfile
+      - run: ls node_modules || yarn install --frozen-lockfile --ignore-engines
       - save_cache:
           name: Save Node Modules Cache
           key: yarn-modules-{{ checksum "yarn.lock" }}
