@@ -98,4 +98,4 @@ jobs:
           command: |
             mv android/apk/debug/app-debug.apk android/apk
             mv android/apk/release/app-release-unsigned.apk android/apk
-            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_BUILD_NUM} ./android/apk/
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_BUILD_NUM} 0.0.1 ./android/apk/
